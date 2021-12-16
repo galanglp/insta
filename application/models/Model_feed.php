@@ -1,21 +1,21 @@
 <?php
-class Model_ujian extends CI_Model {
+class Model_feed extends CI_Model {
 
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
-	var $table = 'soal_cbt';
-	var $column = array('soal_cbt.soal_id as id', 'soal_cbt.soal_jenis as jenis_soal', 'soal_cbt.soal_text as soal', 'soal_cbt.soal_audio as audio');
+	var $table = 'post';
+	var $column = array('post.idPost as id', 'post.source as source', 'post.caption as caption');
 
-	public function get_datatables_soal($row)
+	public function get_datatables_post()
 	{
 		$this->db->select($this->column);
 		$this->db->from($this->table);
-		$this->db->order_by('soal_cbt.soal_jenis', 'ASC');
+		$this->db->order_by('post.idPost', 'ASC');
 		$query = $this->db->get();
-		return $query->row_array($row);
+		return $query->result();
 	}
 
 	public function get_all_soal()

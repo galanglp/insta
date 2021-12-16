@@ -33,5 +33,5 @@
             <div style="color: white;
             padding: 15px 50px 5px 50px;
             float: right;
-            font-size: 16px;"> Halo <?=$this->session->userdata('nama')==null ? $this->session->userdata('username') : $this->session->userdata('nama')?> &nbsp; <?=$kertas == 1 ? '<a href="'.base_url("login/logout").'" class="btn btn-danger square-btn-adjust">Logout</a>' : ''?> </div>
+            font-size: 16px;"><a href="<?=base_url('conaddpost')?>" class="btn btn-default">Add Post</a> Halo <?=$this->session->userdata('nama')==null ? $this->session->userdata('username') : $this->session->userdata('nama')?> &nbsp; <?=$kertas == 1 ? '<a href="'.base_url("login/logout").'" class="btn btn-danger square-btn-adjust">Logout</a>' : ''?> </div>
         </nav>

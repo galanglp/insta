@@ -26,14 +26,6 @@ class Login extends CI_Controller {
 
 	public function index($message = "")
 	{
-		if ($this->session->userdata('akses')==2) {
-            redirect('conujian');
-        }elseif ($this->session->userdata('akses')==1) {
-        	redirect('consoal');
-        }elseif ($this->session->userdata('akses')==null) {
-        	
-        }
-
 		$result = array(
 			'action' => 'login/cek',
 			'message' => $message
@@ -44,28 +36,17 @@ class Login extends CI_Controller {
 	public function cek()
 	{
 		$data = array(
-                    'user' => $this->input->post('user'),
+                    'username' => $this->input->post('username'),
                 'password' => $this->input->post('password')
             );
 		$message = $this->login_model->cek_model($data);
 		if ($message['error']==0) {
 			redirect('login/index/gagal');
-		}elseif ($message['akses']==1) {
+		}else{
 			$data = array('username' => $message['username'],
-						'akses' => $message['akses']
 					);
 			$this->session->set_userdata($data);
-			redirect('consoal');
-		}elseif ($message['akses']==2) {
-			$nama = $this->login_model->get_peserta($message['id'])->peserta_nama;
-			$id_peserta = $this->login_model->get_peserta($message['id'])->peserta_id;
-			$data = array('username' => $message['username'],
-						'nama' => $nama,
-						'id_peserta' => $id_peserta, 
-						'akses' => $message['akses']
-					);
-			$this->session->set_userdata($data);
-			redirect('conujian');
+			redirect('confeed');
 		}
 	}
 

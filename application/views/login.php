@@ -40,7 +40,7 @@
               <br />
               <div class="form-group input-group">
                 <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                <input type="text" class="form-control" placeholder="Your Username " name="user" />
+                <input type="text" class="form-control" placeholder="Your Username " name="username" />
               </div>
               <div class="form-group input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
