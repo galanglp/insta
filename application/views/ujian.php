@@ -1,66 +1,117 @@
-<div class="row">
-    <div class="page-wrapper col-md-4" >
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
+<div class="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <img src="<?=base_url('assets').'/uploads/0067.jpg'?>" style="width:400px;height:400px;" alt="Italian Trulli">
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
             </div>
-            <div class="panel-body">
-                
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <b>FOTO</b>
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
             </div>
-        </div>
-        
-    </div>
-    <div class="page-wrapper col-md-4">
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
-            </div>
-            <div class="panel-body">
-            </div>
-        </div>
-        
-    </div>
-    <div class="page-wrapper col-md-4">
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
-            </div>
-            <div class="panel-body">
-            </div>
-        </div>
-        
-    </div>
-</div>
-<div class="row">
-    <div class="page-wrapper col-md-4" >
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
-            </div>
-            <div class="panel-body">
-            </div>
-        </div>
-        
-    </div>
-    <div class="page-wrapper col-md-4">
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
-            </div>
-            <div class="panel-body">
-            </div>
-        </div>
-        
-    </div>
-    <div class="page-wrapper col-md-4">
-        <div class="panel panel-danger" align="left">
-            <div class="panel-heading">
-                <b>FOTO</b>
-            </div>
-            <div class="panel-body">
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <b>FOTO</b>
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <b>FOTO</b>
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <img src="pic_trulli.jpg" alt="Italian Trulli">
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger" align="left">
+                        <div class="panel-heading">
+                            <b>FOTO</b>
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-comment"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="panel-footer">
+                            comment
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
