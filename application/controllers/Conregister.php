@@ -5,7 +5,6 @@ class Conregister extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-        $this->load->model('Model_peserta');
         $this->load->model('login_model');
 	}
 
@@ -21,52 +20,33 @@ class Conregister extends CI_Controller {
 
     public function regist()
     {
-        if ($this->input->post('nim') != null && $this->input->post('password') != null && $this->input->post('nama') != null && $this->input->post('kelas') != null) {
+        if ($this->input->post('username') != null && $this->input->post('password') != null && $this->input->post('email') != null) {
             $data_user = array(
-                'username' => $this->input->post('nim'),
+                'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
-                'akses' => 2,
+                'email' => $this->input->post('email'),
             );
-            $username = $this->input->post('username');
-            $insert_user = $this->Model_peserta->save_user($data_user);
-            $user_id = $this->Model_peserta->get_user_id($this->input->post('nim'))->id_user;
 
-            $data_peserta = array(
-                'peserta_user_id' => $user_id,
-                'peserta_nim' => $this->input->post('nim'),
-                'peserta_nama' => $this->input->post('nama'),
-                'peserta_kelas' => $this->input->post('kelas'),
-            );
-            $insert = $this->Model_peserta->save_peserta($data_peserta);
+            $insert_user = $this->login_model->save_user($data_user);
 
-            $this->cekRegist($this->input->post('nim'),$this->input->post('password'));
+            $this->cekRegist($this->input->post('username'),$this->input->post('password'));
         }else {
             redirect('conregister/index/gagal');
         }
     }
 
-    public function cekRegist($user,$password)
+    public function cekRegist($username,$password)
     {
         $data = array(
-                    'user' => $user,
+                'username' => $username,
                 'password' => $password
             );
         $message = $this->login_model->cek_model($data);
 
         if ($message['error']==0) {
             redirect('conregister/index/gagal');
-        }elseif ($message['akses']==2) {
-            $nama = $this->login_model->get_peserta($message['id'])->peserta_nama;
-            $id_peserta = $this->login_model->get_peserta($message['id'])->peserta_id;
-            $data = array('username' => $message['username'],
-                        'nama' => $nama,
-                        'id_peserta' => $id_peserta,
-                        'akses' => $message['akses'], 
-                    );
-            $this->session->set_userdata($data);
-            redirect('conujian');
         }else{
-            redirect('conregister/index/gagal');
+            redirect('conujian');
         }
     }
 	

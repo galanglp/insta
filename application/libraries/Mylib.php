@@ -41,7 +41,7 @@ class Mylib {
     }
     public function get_site_title()
     {
-        $site_name = "Computer Based-Test";
+        $site_name = "INSTA";
         return $site_name;
     }
 

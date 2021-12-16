@@ -22,13 +22,13 @@ class Conujian extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		if ($this->session->userdata('akses')==2) {
+		// if ($this->session->userdata('akses')==2) {
             
-        }elseif ($this->session->userdata('akses')==1) {
-        	redirect('consoal');
-        }elseif ($this->session->userdata('akses')==null) {
-        	redirect('login');
-        }
+  //       }elseif ($this->session->userdata('akses')==1) {
+  //       	redirect('consoal');
+  //       }elseif ($this->session->userdata('akses')==null) {
+  //       	redirect('login');
+  //       }
         
 		$this->load->model('model_ujian');
 		$this->peserta_id = $this->session->userdata('id_peserta');
@@ -41,7 +41,7 @@ class Conujian extends CI_Controller {
 	{
 		$data = array('error' => $error);
 		
-		$this->mylib->load_view_peserta('Ujian','ujian', $data);
+		$this->mylib->load_view_peserta('FEED','ujian', $data);
 	}
 
 	public function kertasUjian($row = 0, $nav = 1)

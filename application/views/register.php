@@ -19,7 +19,7 @@
         <div class="row text-center  ">
             <div class="col-md-12">
                 <br /><br />
-                <h2> CBT : Register</h2>
+                <h2>Register</h2>
                
                 <h5>( Register yourself to get access )</h5>
                  <br />
@@ -41,7 +41,7 @@
                                     <br/>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                                            <input type="text" class="form-control" placeholder="Username" name="Username" />
+                                            <input type="text" class="form-control" placeholder="Username" name="username" />
                                         </div>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
@@ -50,7 +50,7 @@
                                         </div>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope"  ></i></span>
-                                            <input type="text" class="form-control" placeholder="Email" name="Email" />
+                                            <input type="text" class="form-control" placeholder="Email" name="email" />
                                         </div>
                                      
                                      <input class="btn btn-success" type="submit" value="Register Me" />
