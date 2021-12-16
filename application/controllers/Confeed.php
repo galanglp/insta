@@ -30,10 +30,38 @@ class Confeed extends CI_Controller {
 	{
 		$data = array(
 			'error' => $error,
-			'post' => $this->model_feed->get_datatables_post(),
+			'feed' => $this->model_feed->get_datatables_post(),
 		);
 		
 		$this->mylib->load_view_peserta('FEED','feed', $data);
+	}
+
+	public function saveComment()
+	{
+		$data = array(
+                    'idPost' => $this->input->post('idPost'),
+                    'idUser' => $this->input->post('idUser'),
+                    'comment' => $this->input->post('comment')
+                );
+        $insert = $this->model_feed->save_comment($data);
+        redirect("confeed");
+	}
+
+	public function getFeed()
+	{
+		$feed = array();
+		$post = $this->model_feed->get_datatables_post();
+		foreach ($post as $post) {
+			$feed['idPost'] = $post->id;
+			$feed['source'] = $post->source;
+			$feed['caption'] = $post->caption;
+			$comment = $this->model_feed->get_datatables_comment($post->id);
+			foreach ($comment as $comment) {
+				$feed['comment']['idUser'] = $comment->idUser;
+				$feed['comment']['comment'] = $comment->comment;
+			}
+		}
+        return $feed;
 	}
 	
 }
